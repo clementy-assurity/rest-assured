@@ -3,12 +3,19 @@ package steps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
+import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
+import org.junit.Before;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class StudentSteps {
     private Response response;
+
+    @Before
+    public void setup() {
+        RestAssured.defaultParser = Parser.JSON;
+    }
 
     @When("I check the details of student {int}")
     public void i_check_the_details_of_student(Integer studentId) {

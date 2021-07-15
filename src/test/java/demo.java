@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 
 public class demo {
-
     private ValidatableResponse getStudentById(Integer studentId) {
         return given()
             .baseUri("https://it-foundations.app.ap.assurity.cloud/")
