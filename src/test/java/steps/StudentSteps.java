@@ -21,7 +21,7 @@ public class StudentSteps {
     public void i_check_the_details_of_student(Integer studentId) {
         RestAssured.baseURI = "https://it-foundations.app.ap.assurity.cloud/";
         response = RestAssured.get("people/" + studentId);
-        System.out.println(response.asPrettyString());
+        System.out.println(response.asString());
     }
 
     @Then("I can see that their name is {string}")
