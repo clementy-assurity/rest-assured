@@ -1,11 +1,11 @@
 package steps;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
-import org.junit.Before;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
